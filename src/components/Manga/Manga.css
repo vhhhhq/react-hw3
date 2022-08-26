@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+.body-manga {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(25%);
+}
+.blog-posts {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+    align-items: center;
+}
+.posts {
+    width: calc(40% - 10px);
+    overflow: hidden;
+}
+
+.post-img {
+    width: 100%;
+    border-radius: 6px;
+    transition: 0.3s linear;
+}
+.man-image {
+    border-radius: 6px;
+    width: 300px;
+    height: 400px;
+    box-shadow: 0px 7px 25px rgba(130, 130, 130, 0.80);
+    background: linear-gradient(to right, #b993d6, #8ca6db); 
+}
+.post-content {
+    background: linear-gradient(to right, #b993d6, #8ca6db); 
+    backdrop-filter: blur(2px);
+    margin: 0 10px;
+    padding: 10px;
+    margin-top: 0px;
+    border-radius: 6px;
+    transform: translateY(-60px);
+    transition: 0.3s linear;
+    cursor: pointer;
+    box-shadow: 0px 7px 25px rgba(130, 130, 130, 0.80);
+}
+.post-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+}
+.date {
+    font-size: 15px;
+    font-style: italic;
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+
+}
+.post:hover .post-img {
+    transform: translateY(20px);
+}
+.post:hover .post-content {
+    transform: translateY(-80px);
+}
+@media screen and (max-width: 1200px) {
+    .blog-posts {
+        justify-content: center;
+    }
+    .posts {
+        width: min(600px, 100%);
+    }
+}
